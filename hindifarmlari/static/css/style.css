@@ -1,0 +1,106 @@
+/* Navbar Ayarları */
+.navbar {
+    background-color: #1a1a1a !important; /* Koyu gri renk */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #ffffff !important; /* Beyaz yazı rengi */
+    font-size: 1.2rem; /* Yazı boyutu */
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important; /* Beyaz yazı rengi */
+    margin-right: 15px;
+    font-size: 1rem; /* Yazı boyutu */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #00bcd4 !important; /* Hover rengi (açık mavi) */
+}
+
+.navbar-nav .nav-link.active {
+    color: #00bcd4 !important; /* Aktif sayfa rengi (açık mavi) */
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    background-color: #1a1a1a !important; /* Dropdown arka plan rengi */
+    border: none; /* Kenarlık kaldırma */
+}
+
+.dropdown-menu .dropdown-item {
+    color: #ffffff !important; /* Dropdown metin rengi */
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #00bcd4 !important; /* Hover rengi */
+    color: #ffffff !important;
+}
+
+/* Slayt Ayarları */
+#anasayfaSlayt {
+    width: 100%; /* Tam genişlik */
+    max-width: 1200px; /* Maksimum genişlik */
+    margin: 0 auto; /* Ortala */
+    overflow: hidden; /* Taşmayı engelle */
+}
+
+#anasayfaSlayt .carousel-inner {
+    height: 60vh; /* Ekran yüksekliğinin %60'ı */
+    border-radius: 10px; /* Köşeleri yuvarla */
+    overflow: hidden; /* Taşmayı engelle */
+}
+
+#anasayfaSlayt .carousel-item {
+    height: 100%; /* Slayt yüksekliğini %100 yap */
+}
+
+#anasayfaSlayt .carousel-item img {
+    width: 100%; /* Genişliği %100 yap */
+    height: 100%; /* Yüksekliği %100 yap */
+    object-fit: contain; /* Resimlerin oranlarını koruyarak tam olarak görünmesini sağlar */
+    background-color: #f0f0f0; /* Resimlerin arka plan rengi */
+}
+
+#anasayfaSlayt .carousel-caption {
+    padding: 10px; /* İçerik padding'i */
+    background-color: rgba(0, 0, 0, 0.5); /* Arka plan rengi (yarı saydam siyah) */
+    border-radius: 5px; /* Köşeleri yuvarla */
+}
+
+#anasayfaSlayt .carousel-caption h5 {
+    font-size: 1.5rem; /* Başlık boyutu */
+    margin-bottom: 5px; /* Başlık ile metin arası boşluk */
+}
+
+#anasayfaSlayt .carousel-caption p {
+    font-size: 1rem; /* Metin boyutu */
+    margin-bottom: 10px; /* Metin ile buton arası boşluk */
+}
+
+#anasayfaSlayt .carousel-caption .btn {
+    padding: 0.3rem 0.6rem; /* Buton boyutu */
+    font-size: 1rem; /* Buton yazı boyutu */
+}
+
+/* Mobil Cihazlar için Ayarlar */
+@media (max-width: 768px) {
+    #anasayfaSlayt .carousel-inner {
+        height: 40vh; /* Mobilde daha küçük boyut */
+    }
+
+    #anasayfaSlayt .carousel-caption h5 {
+        font-size: 1.2rem; /* Mobilde daha küçük başlık */
+    }
+
+    #anasayfaSlayt .carousel-caption p {
+        font-size: 0.9rem; /* Mobilde daha küçük metin */
+    }
+
+    #anasayfaSlayt .carousel-caption .btn {
+        padding: 0.2rem 0.5rem; /* Mobilde daha küçük buton */
+        font-size: 0.9rem; /* Mobilde daha küçük buton yazısı */
+    }
+}

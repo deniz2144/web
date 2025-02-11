@@ -1,0 +1,120 @@
+{% extends 'urunler/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Slayt (Carousel) -->
+<div id="anasayfaSlayt" class="carousel slide" data-bs-ride="carousel" style="width: 100%; max-width: 1200px; margin: 0 auto;">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#anasayfaSlayt" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#anasayfaSlayt" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#anasayfaSlayt" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#anasayfaSlayt" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#anasayfaSlayt" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#anasayfaSlayt" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    </div>
+    <div class="carousel-inner" style="height: 60vh;">
+        <div class="carousel-item active">
+            <img src="{% static 'images/slayt1.jpg' %}" class="d-block w-100 carousel-img" alt="Hindi Ürünleri">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Hindi Ürünleri</h5>
+                <p>Lezzetli ve sağlıklı hindi etleriyle tanışın.</p>
+                <a href="/urunler/?kategori=hindi" class="btn btn-primary btn-sm">Keşfet</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/slayt2.jpeg' %}" class="d-block w-100 carousel-img" alt="Tavuk Ürünleri">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Tavuk Ürünleri</h5>
+                <p>Taze ve doğal tavuk etleriyle tanışın.</p>
+                <a href="/urunler/?kategori=tavuk" class="btn btn-warning btn-sm">Keşfet</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/slayt3.jpg' %}" class="d-block w-100 carousel-img" alt="Özel Günler İçin Hindi">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Özel Günler İçin Hindi</h5>
+                <p>Bayramlar için mükemmel bütün hindi ürünleri.</p>
+                <a href="/urunler/?kategori=hindi" class="btn btn-success btn-sm">Keşfet</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/slayt4.png' %}" class="d-block w-100 carousel-img" alt="Kaliteli Hindi">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Kaliteli Hindi</h5>
+                <p>En iyi kalitede hindi etleri.</p>
+                <a href="/urunler/?kategori=hindi" class="btn btn-info btn-sm">Keşfet</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/slayt5.png' %}" class="d-block w-100 carousel-img" alt="Organik Tavuk">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Organik Tavuk</h5>
+                <p>Sağlıklı ve organik tavuk etleri.</p>
+                <a href="/urunler/?kategori=tavuk" class="btn btn-secondary btn-sm">Keşfet</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/slayt6.jpg' %}" class="d-block w-100 carousel-img" alt="Lezzetli Hindi">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Lezzetli Hindi</h5>
+                <p>Muhteşem lezzette hindi etleri.</p>
+                <a href="/urunler/?kategori=hindi" class="btn btn-danger btn-sm">Keşfet</a>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#anasayfaSlayt" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Önceki</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#anasayfaSlayt" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Sonraki</span>
+    </button>
+</div>
+
+<!-- Kategoriler -->
+<div class="row mt-5">
+    <div class="col-md-6">
+        <div class="card text-center bg-primary text-white">
+            <div class="card-body">
+                <h2 class="card-title">Hindi Ürünleri</h2>
+                <p class="card-text">Lezzetli ve sağlıklı hindi etleriyle tanışın.</p>
+                <a href="/urunler/?kategori=hindi" class="btn btn-light">Keşfet</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card text-center bg-warning text-dark">
+            <div class="card-body">
+                <h2 class="card-title">Tavuk Ürünleri</h2>
+                <p class="card-text">Taze ve doğal tavuk etleriyle tanışın.</p>
+                <a href="/urunler/?kategori=tavuk" class="btn btn-dark">Keşfet</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Öne Çıkan Ürünler -->
+<div class="mt-5">
+    <h2 class="text-center mb-4">Öne Çıkan Ürünler</h2>
+    <div class="row">
+        {% for urun in urunler %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    {% if urun.resim %}
+                        <img src="{{ urun.resim.url }}" class="card-img-top" alt="{{ urun.isim }}">
+                    {% else %}
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="{{ urun.isim }}">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ urun.isim }}</h5>
+                        <p class="card-text">{{ urun.aciklama }}</p>
+                        <p class="card-text"><strong>Fiyat:</strong> {{ urun.fiyat }} TL</p>
+                        <a href="{% url 'urun_detay' urun.pk %}" class="btn btn-primary">Detaylar</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
