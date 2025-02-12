@@ -13,6 +13,17 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os
 
+
+# Statik dosyalar için URL
+STATIC_URL = '/static/'
+
+# Statik dosyaların toplanacağı dizin
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Ek statik dosya dizinleri (isteğe bağlı)
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
