@@ -1,0 +1,23 @@
+{% extends 'urunler/base.html' %}
+{% block content %}
+<h1 class="text-center mb-4">Ürünlerimiz</h1>
+<p class="text-center lead">Kaliteli hindi ve tavuk ürünlerimizi keşfedin!</p>
+<div class="row">
+    {% for urun in urunler %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <a href="{% url 'urun_detay' urun.pk %}" class="card-link stretched-link"></a>
+                {% if urun.resim %}
+                    <img src="{{ urun.resim.url }}" class="card-img-top" alt="{{ urun.isim }}">
+                {% else %}
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="{{ urun.isim }}">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ urun.isim }}</h5>
+                    <p class="card-text">{{ urun.aciklama }}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

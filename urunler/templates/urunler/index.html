@@ -1,0 +1,137 @@
+{% extends 'urunler/base.html' %}
+{% load static %}
+
+{% block slider %}
+<!-- Slayt Gösterisi (Carousel) -->
+<div id="anasayfaSlayt" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#anasayfaSlayt" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#anasayfaSlayt" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#anasayfaSlayt" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#anasayfaSlayt" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#anasayfaSlayt" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#anasayfaSlayt" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    </div> 
+    <div class="carousel-inner"> 
+        <div class="carousel-item active"> 
+            <img src="{% static 'images/slayt1.jpg' %}" class="d-block w-100 carousel-img" alt="Hindi Ürünleri">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-4 rounded">
+                <h2 class="display-5 fw-bold">Sağlıklı Hindi Üretimi</h2>
+                <p class="lead">Kendi doğal ortamında yetiştirilen tavuklarımız, lezzet ve tazeliği bir araya getiriyor..</p>
+                <a href="/urunler/?kategori=hindi" class="btn btn-primary btn-lg">Keşfet</a>
+            </div>
+        </div> 
+        <div class="carousel-item">
+            <img src="{% static 'images/slayt2.png' %}" class="d-block w-100 carousel-img" alt="Tavuk Ürünleri">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-4 rounded">
+                <h2 class="display-5 fw-bold">Orjinal Hindi Üretimi</h2>
+                <p class="lead">Doğal ortamda yetiştirilen tavuklarımız, sofralarınıza tazelik katıyor.</p>
+                <a href="/urunler/?kategori=tavuk" class="btn btn-warning btn-lg">Keşfet</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/slayt3.jpg' %}" class="d-block w-100 carousel-img" alt="Özel Günler İçin Hindi">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-4 rounded">
+                <h2 class="display-5 fw-bold">Orijinal Tavuk Irklarımız</h2>
+                <p class="lead">Yüksek kaliteli bütün hindi ürünleri sunuyoruz.</p>
+                <a href="/urunler/?kategori=hindi" class="btn btn-success btn-lg">Keşfet</a>
+            </div>
+        </div> 
+        <div class="carousel-item">
+            <img src="{% static 'images/slayt4.jpg' %}" class="d-block w-100 carousel-img" alt="Kaliteli Hindi">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-4 rounded">
+                <h2 class="display-5 fw-bold">Kaliteli Hindi Üretimi</h2>
+                <p class="lead">En iyi kalitede hindi etleriyle tanışın.</p>
+                <a href="/urunler/?kategori=hindi" class="btn btn-info btn-lg">Keşfet</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/slayt5.jpeg' %}" class="d-block w-100 carousel-img" alt="Organik Tavuk">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-4 rounded">
+                <h2 class="display-5 fw-bold">Sağlıklı Tavuk Üretimi</h2>
+                <p class="lead">Sağlıklı ve organik tavuk etleriyle tanışın.</p>
+                <a href="/urunler/?kategori=tavuk" class="btn btn-secondary btn-lg">Keşfet</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/slayt6.jpeg' %}" class="d-block w-100 carousel-img" alt="Lezzetli Hindi">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-4 rounded">
+                <h2 class="display-5 fw-bold">Sağlıklı Hindi Üretimi</h2>
+                <p class="lead">Muhteşem lezzette hindi etleriyle tanışın.</p>
+                <a href="/urunler/?kategori=hindi" class="btn btn-danger btn-lg">Keşfet</a>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#anasayfaSlayt" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Önceki</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#anasayfaSlayt" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Sonraki</span>
+    </button>
+</div>
+{% endblock %}
+
+{% block content %}
+<!-- Kategoriler -->
+<div class="container mt-5">
+    <div class="row g-4">
+        <!-- Hindi Ürünleri -->
+        <div class="col-md-6">
+            <div class="card text-center text-white h-100 shadow-lg border-0 hover-scale" 
+                 style="background: linear-gradient(135deg, #2c3e50, #3498db);">
+                <div class="card-body p-5">
+                    <div class="icon-square bg-white text-primary rounded-circle mb-4">
+                        <i class="fas fa-drumstick-bite fa-2x"></i>
+                    </div>
+                    <h2 class="card-title display-6 fw-bold">Sertifikalı ve Genetiği Korunmuş Hindi Irklarımız</h2>
+                    <p class="card-text lead">Doğal beslenen hindilerimizle sağlıklı ve kaliteli üretim gerçekleştiriyoruz.</p>
+                    <a href="/urunler/?kategori=hindi" class="btn btn-light btn-lg mt-3">
+                        Keşfet <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Tavuk Ürünleri -->
+        <div class="col-md-6">
+            <div class="card text-center text-dark h-100 shadow-lg border-0 hover-scale" 
+                 style="background: linear-gradient(135deg, #f1c40f, #e67e22);">
+                <div class="card-body p-5">
+                    <div class="icon-square bg-white text-warning rounded-circle mb-4">
+                        <i class="fas fa-egg fa-2x"></i>
+                    </div>
+                    <h2 class="card-title display-6 fw-bold">Sertifikalı ve Genetiği Korunmuş Tavuk Irklarımız</h2>
+                    <p class="card-text lead">Doğal beslenen tavuklarımızla sağlıklı ve kaliteli üretim gerçekleştiriyoruz.</p>
+                    <a href="/urunler/?kategori=tavuk" class="btn btn-dark btn-lg mt-3">
+                        Keşfet <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Öne Çıkan Ürünler -->
+<div class="container mt-5">
+    <h2 class="text-center mb-4 display-4 fw-bold">Öne Çıkan Ürünler</h2>
+    <div class="row g-4">
+        {% for urun in urunler %}
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm hover-scale">
+                {% if urun.resim %}
+                <img src="{{ urun.resim.url }}" class="card-img-top" alt="{{ urun.isim }}">
+                {% else %}
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="{{ urun.isim }}">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">{{ urun.isim }}</h5>
+                    <p class="card-text text-muted">{{ urun.aciklama }}</p>
+                    <a href="{% url 'urun_detay' urun.pk %}" class="btn btn-outline-primary w-100">Detaylar</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

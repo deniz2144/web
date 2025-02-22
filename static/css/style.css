@@ -1,0 +1,228 @@
+/* Navbar Ayarları */
+.navbar {
+    background-color: #1a1a1a !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    color: #ffffff !important;
+    font-size: 1.2rem;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    margin-right: 15px;
+    font-size: 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #00bcd4 !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: #00bcd4 !important;
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    background-color: #1a1a1a !important;
+    border: none;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #ffffff !important;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #00bcd4 !important;
+    color: #ffffff !important;
+}
+
+/* Slayt Ayarları */
+#anasayfaSlayt {
+    width: 600px !important; /* Slayt 6’nın oranına uygun genişlik */
+    height: 400px !important; /* Slayt 6’nın oranına uygun yükseklik (3:2) */
+    padding: 0 !important;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+    position: relative !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.carousel-inner {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#anasayfaSlayt .carousel-item {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#anasayfaSlayt .carousel-item img {
+    width: 100% !important;
+    height: 400px !important; /* Tüm slaytlar Slayt 6 gibi olacak */
+    object-fit: cover !important; /* Resim oranını koruyarak doldur */
+    object-position: center !important;
+    border-radius: 0 !important;
+}
+
+/* Caption ayarları */
+#anasayfaSlayt .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    padding: 15px;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+}
+
+#anasayfaSlayt .carousel-caption h5 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#anasayfaSlayt .carousel-caption p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+#anasayfaSlayt .carousel-caption .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+#anasayfaSlayt .carousel-caption .btn:hover {
+    transform: scale(1.1);
+}
+
+/* Mobil Ayarları */
+@media (max-width: 768px) {
+    #anasayfaSlayt {
+        width: 90% !important; /* Mobil için esnek genişlik */
+        height: 300px !important; /* Mobil için 3:2 oranında yükseklik */
+    }
+
+    #anasayfaSlayt .carousel-item img {
+        height: 300px !important;
+        object-position: center center !important;
+    }
+
+    #anasayfaSlayt .carousel-caption h5 {
+        font-size: 1rem;
+    }
+
+    #anasayfaSlayt .carousel-caption p {
+        font-size: 0.8rem;
+    }
+
+    #anasayfaSlayt .carousel-caption .btn {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Diğer Bileşenler */
+.row.mt-5 {
+    margin-top: 2rem !important;
+}
+
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Ürün Kartları İçin Düzenleme */
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-body {
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.card .btn {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.card .btn:hover {
+    transform: scale(1.05);
+}
+
+/* Navbar Mobil Ayarları */
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-collapse {
+    background-color: #2c3e50;
+    padding: 1rem;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}

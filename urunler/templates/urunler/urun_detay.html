@@ -1,0 +1,16 @@
+{% extends 'urunler/base.html' %}
+{% block content %}
+<div class="row mt-5">
+    <div class="col-md-6">
+        {% if urun.resim %}
+            <img src="{{ urun.resim.url }}" class="img-fluid" alt="{{ urun.isim }}">
+        {% else %}
+            <img src="https://via.placeholder.com/600x400" class="img-fluid" alt="{{ urun.isim }}">
+        {% endif %}
+    </div>
+    <div class="col-md-6">
+        <h1>{{ urun.isim }}</h1>
+        <p>{{ urun.aciklama }}</p>
+    </div>
+</div>
+{% endblock %}

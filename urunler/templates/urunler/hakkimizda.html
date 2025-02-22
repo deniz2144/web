@@ -1,0 +1,97 @@
+{% extends 'urunler/base.html' %}
+
+{% block content %}
+<section class="about-section py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <!-- Başlık ve Özet -->
+                <div class="text-center mb-5">
+                    <h1 class="display-5 fw-bold text-dark mb-3">Ünlü Hindicilik</h1>
+                    <div class="divider mx-auto bg-primary mb-4"></div>
+                    <p class="lead text-muted">
+                        Uzun yıllardır, yalnızca sertifikalı ve genetiği korunmuş ırklarla doğanın ritmine saygı duyarak üretim yapıyoruz.
+                    </p>
+                </div>
+
+                <!-- Kalite Taahhüdü -->
+                <div class="quality-commitment bg-white p-5 rounded-3 shadow-sm mb-5">
+                    <h3 class="h4 fw-bold mb-4 text-primary">Kalite Politikamız</h3>
+                    <p class="text-muted mb-4">
+                        Tüm üretim süreçlerimiz sıkı veteriner kontrolü altında yürütülmektedir:
+                    </p>
+                    <ul class="text-muted ps-4 mb-4">
+                        <li class="mb-2">ISO 22000 Gıda Güvenliği Sertifikalı</li>
+                        <li class="mb-2">GDO’suz yem kullanımı</li>
+                        <li class="mb-2">Antibiyotiksiz yetiştiricilik</li>
+                        <li class="mb-2">Aşılı ve sertifikalı damızlıklar</li>
+                    </ul>
+                    <small class="text-muted">*Tüm üretim süreçlerimiz Tarım Bakanlığı tarafından denetlenmektedir.</small>
+                </div>
+
+                <!-- Üretim Felsefesi -->
+                <div class="row g-4 mb-5">
+                    <div class="col-md-6">
+                        <div class="p-4 border rounded-3 shadow-sm h-100 bg-white">
+                            <h4 class="h5 fw-bold mb-3 text-primary">Neden Aşılı Irklar?</h4>
+                            <p class="text-muted small mb-3">
+                                Kullandığımız tüm damızlıklar, Tarım Bakanlığı onaylı
+                                aşı protokollerine uygun olarak yetiştirilmektedir.
+                            </p>
+                            <h5 class="fw-semibold mt-3 text-dark">Avantajları:</h5>
+                            <ul class="text-muted ps-3">
+                                <li class="mb-2">Hastalıklara direnç</li>
+                                <li class="mb-2">Yüksek verimlilik</li>
+                                <li class="mb-2">Genetik saflık</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="p-4 border rounded-3 shadow-sm h-100 bg-white">
+                            <h4 class="h5 fw-bold mb-3 text-primary">Orijinallik Garantisi</h4>
+                            <p class="text-muted small mb-3">
+                                Tüm ürünlerimizde şeffaflık ve kalite güvencesi sağlıyoruz:
+                            </p>
+                            <ul class="text-muted ps-3">
+                                <li class="mb-2">Üretim tarihli seri numarası</li>
+                                <li class="mb-2">Yetiştirici bilgileri</li>
+                                <li class="mb-2">Veteriner onay damgası</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mesaj Bölümü -->
+                <div class="text-center mt-5">
+                    <blockquote class="blockquote text-dark fst-italic">
+                        <p class="mb-0">"Doğanın bize sunduğu en iyiyi, en saf haliyle sizlere ulaştırıyoruz."</p>
+                        <footer class="blockquote-footer mt-2">Ünlü Hindicilik Ve Kuluçka</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .divider {
+        width: 80px;
+        height: 3px;
+        background-color: #0d6efd;
+    }
+    .quality-commitment {
+        background: linear-gradient(to right, #f8f9fa, #ffffff);
+        border: 1px solid rgba(13, 110, 253, 0.1);
+    }
+    .border {
+        border-color: rgba(13, 110, 253, 0.2) !important;
+    }
+    .about-section {
+        background-color: #f8f9fa;
+    }
+    .text-primary {
+        color: #0d6efd !important;
+    }
+</style>
+{% endblock %}
